@@ -231,7 +231,7 @@ public class ZEDPointCloudManager : MonoBehaviour
         if (mat != null)
         {
 
-            //Don't draw anything if the user doesn't want to (this part was not included in original code)
+            //Don't draw anythingin other cameras (this part was not included in original code)
             foreach (Camera cam in hiddenObjectFromCamera)
                 if (cam == Camera.current) return;
             if (!display) return; 
