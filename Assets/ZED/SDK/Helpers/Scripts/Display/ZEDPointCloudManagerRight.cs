@@ -1,5 +1,7 @@
 ﻿//======= Copyright (c) Stereolabs Corporation, All rights reserved. ===============
 
+// Code altered in order to display images for the right eye 
+
 using UnityEngine;
 using System.Collections.Generic;
 /// <summary>
@@ -231,7 +233,7 @@ public class ZEDPointCloudManagerRight : MonoBehaviour
     {
         if (mat != null)
         {
-            foreach (Camera cam in hiddenObjectFromCamera)
+            foreach (Camera cam in hiddenObjectFromCamera)  //Don't draw anything if the user doesn't want to (this part was not included in original code)
                 if (cam == Camera.current) return;
             if (!display) return; //Don't draw anything if the user doesn't want to. 
 

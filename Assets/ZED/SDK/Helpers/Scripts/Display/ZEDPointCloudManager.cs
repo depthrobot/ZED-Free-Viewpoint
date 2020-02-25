@@ -231,10 +231,10 @@ public class ZEDPointCloudManager : MonoBehaviour
         if (mat != null)
         {
 
-            //
-            foreach(Camera cam in hiddenObjectFromCamera)
+            //Don't draw anything if the user doesn't want to (this part was not included in original code)
+            foreach (Camera cam in hiddenObjectFromCamera)
                 if (cam == Camera.current) return;
-            if (!display) return; //Don't draw anything if the user doesn't want to. 
+            if (!display) return; 
 
             //mat.SetMatrix("_Position", transform.localToWorldMatrix);
             mat.SetMatrix(positionID, transform.localToWorldMatrix);
